@@ -71,6 +71,7 @@ public class App
           
           String input4 = req.queryParams("input4").replaceAll("\\s","");
           int input4AsInt = Integer.parseInt(input4);
+          
           System.out.println(input4AsInt);
   
 
