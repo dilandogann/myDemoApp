@@ -73,7 +73,7 @@ public class AppTest
 
     public void testNonNegativeMyMethod(){
     
-     ArrayList<Integer> array=new Arraylist<>(Arrays.asList(1,2,3,4));
+     ArrayList<Integer> array=new ArrayList<>(Arrays.asList(1,2,3,4));
      ArrayList<Integer> array2=new ArrayList<>(Arrays.asList(2,3,4,5));
      assertFalse(new App().myMethod(array,-1,array2,-2));
     
