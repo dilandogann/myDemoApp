@@ -13,19 +13,29 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App
 {
-    public static boolean search(ArrayList<Integer> array, int e) {
-      System.out.println("inside search");
-      if (array == null) return false;
 
-      for (int elt : array) {
-        if (elt == e) return true;
-      }
+    public static boolean myMethod(ArrayList<Integer> array,int num,ArrayList<Integer> array2,int num2){
+    
+     if (array == null && array2==null ) return false;
+    
+     int sum,sum2=0;
+    
+     for(int elt : array)
+      sum+=elt;
+    
+     for(int elt : array2)
+      sum2+=elt;
+      
+      
+      if(sum==num && sum2==num)
+      return true;
+      
       return false;
     }
    public static void main(String[] args) {
         port(getHerokuAssignedPort());
 
-        get("/", (req, res) -> "Hello, World");
+        get("/", (req, res) -> "BIL481 ODEV1!!");
 
         post("/compute", (req, res) -> {
           //System.out.println(req.queryParams("input1"));
@@ -46,7 +56,23 @@ public class App
           String input2 = req.queryParams("input2").replaceAll("\\s","");
           int input2AsInt = Integer.parseInt(input2);
 
-          boolean result = App.search(inputList, input2AsInt);
+          String input3 = req.queryParams("input3");
+          java.util.Scanner sc2 = new java.util.Scanner(input3);
+          sc2.useDelimiter("[;\r\n]+");
+          java.util.ArrayList<Integer> inputList2 = new java.util.ArrayList<>();
+          while (sc2.hasNext())
+          {
+            int value2 = Integer.parseInt(sc2.next().replaceAll("\\s",""));
+            inputList2.add(value2);
+          }
+          System.out.println(inputList2);
+          
+          String input4 = req.queryParams("input4").replaceAll("\\s","");
+          int input4AsInt = Integer.parseInt(input4);
+          
+  
+
+          boolean result = App.myMethod(inputList, input2AsInt,inputList2,input4AsInt);
 
          Map map = new HashMap();
           map.put("result", result);

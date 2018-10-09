@@ -57,5 +57,39 @@ public class AppTest
     public void testNull() {
       assertFalse(new App().search(null, 1));
     }
+    
+    public void testSumTrueMyMethod(){
+     ArrayList<Integer> array=new Arraylist<>(Arrays.asList(1,2,3,4,));
+     ArrayList<Integer> array2=new ArrayList<>(Arrays.asList(2,3,4,5));
+     assertTrue(new App().myMethod(array,10,array2,14));
+    
+    
+    }
+    public void testSumNotTrueMyMethod(){
+    
+     ArrayList<Integer> array=new Arraylist<>(Arrays.asList(1,2,3,4,));
+     ArrayList<Integer> array2=new ArrayList<>(Arrays.asList(2,3,4,5));
+     assertFalse(new App().myMethod(array,15,array2,20));
+    
+    
+    }
+    public void testEmptyArrayMyMethod() {
+    
+     ArrayList<Integer> array = new ArrayList<>();
+     ArrayList<Integer> array2 = new ArrayList<>();
+     assertFalse(new App().myMethod(array, 1,array2,1));
+    }   
+    
+    public void testNull() {
+     assertFalse(new App().myMethod(null, 1,null,1));
+    }
+    public void testNonNegativeMyMethod(){
+    
+     ArrayList<Integer> array=new Arraylist<>(Arrays.asList(1,2,3,4,));
+     ArrayList<Integer> array2=new ArrayList<>(Arrays.asList(2,3,4,5));
+     assertFalse(new App().myMethod(array,-1,array2,-2));
+    
+    
+    }
 
 }
