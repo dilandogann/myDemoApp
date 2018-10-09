@@ -50,5 +50,13 @@ public class AppTest
     
     
     }
+        public void testSumNotTrueMyMethod(){
+    
+     ArrayList<Integer> array=new ArrayList<>(Arrays.asList(1,2,3,4));
+     ArrayList<Integer> array2=new ArrayList<>(Arrays.asList(1,2,3,4));
+     assertTrue(new App().myMethod(array,15,array2,15));
+    
+    
+    }
 
 }
