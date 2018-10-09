@@ -56,6 +56,7 @@ public class App
 
           String input2 = req.queryParams("input2").replaceAll("\\s","");
           int input2AsInt = Integer.parseInt(input2);
+          
           System.out.println(input2AsInt);
 
           String input3 = req.queryParams("input3");
