@@ -18,7 +18,8 @@ public class App
     
      if (array == null && array2==null ) return false;
     
-     int sum,sum2=0;
+     int sum=0;
+     int sum2=0;
     
      for(int elt : array)
       sum+=elt;
