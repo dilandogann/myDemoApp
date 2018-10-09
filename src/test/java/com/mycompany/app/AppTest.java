@@ -58,5 +58,12 @@ public class AppTest
     
     
     }
+    
+    public void testEmptyArrayMyMethod() {
+    
+     ArrayList<Integer> array = new ArrayList<>();
+     ArrayList<Integer> array2 = new ArrayList<>();
+     assertFalse(new App().myMethod(array, 10,array2,10));
+    }  
 
 }
