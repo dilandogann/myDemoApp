@@ -65,5 +65,9 @@ public class AppTest
      ArrayList<Integer> array2 = new ArrayList<>();
      assertFalse(new App().myMethod(array, 10,array2,10));
     }  
+    
+        public void testNull() {
+     assertFalse(new App().myMethod(null, 1,null,1));
+    }
 
 }
